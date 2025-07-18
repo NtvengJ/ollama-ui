@@ -1,101 +1,123 @@
-# Ollama UI
+# Ollama UI 🌐
 
-A modern, feature-rich web interface built with Next.js and shadcn/ui for interacting with local Ollama large language models.
+![Ollama UI](https://img.shields.io/badge/Ollama%20UI-v1.0.0-blue?style=for-the-badge&logo=github)
 
-<!-- ![Screenshot Placeholder](<link-to-your-screenshot.png>) Optional: Add a screenshot -->
+Welcome to **Ollama UI**, a modern and feature-rich web interface designed for seamless interaction with local Ollama large language models. Built using Next.js and shadcn/ui, this project aims to provide a user-friendly experience for developers and AI enthusiasts alike.
 
-## ✨ Features
+## Table of Contents
 
-*   **Real-time Chat:** Engage in conversations with your local Ollama models.
-*   **Streaming Responses:** Get model responses streamed token-by-token for a fluid experience.
-*   **Model Selection:** Easily switch between different Ollama models installed on your system.
-*   **Chat History:**
-    *   Persistent storage of chat conversations (requires backend API setup).
-    *   View past chats in a collapsible sidebar.
-    *   Create new chat sessions.
-    *   Rename existing chats.
-    *   Delete unwanted chats with confirmation.
-*   **Pre-defined Prompts:** Quickly start conversations with helpful prompt suggestions.
-*   **Theme Toggle:** Switch between Light, Dark, and System themes.
-*   **Responsive Design:** Usable across different screen sizes.
-*   **Notifications:** Uses toasts for feedback on actions (e.g., errors, success).
-*   **Loading Indicators:** Visual cues (like NProgress bar) during model loading or response generation.
-*   **Built with Modern Tools:** Leverages Next.js App Router, TypeScript, and Tailwind CSS.
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Releases](#releases)
 
-## 🛠️ Tech Stack
+## Features ✨
 
-*   **Framework:** [Next.js](https://nextjs.org/) (App Router)
-*   **Language:** [TypeScript](https://www.typescriptlang.org/)
-*   **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-*   **UI Components:** [shadcn/ui](https://ui.shadcn.com/)
-*   **Icons:** [Lucide React](https://lucide.dev/)
-*   **State Management:** React Hooks (`useState`, `useEffect`, `useRef`)
-*   **API Interaction:** Fetch API (for Ollama and internal chat history API)
-*   **Progress Indicator:** next-nprogress-bar
-*   **Theming:** next-themes
-*   **Backend Target:** Ollama
+- **User-Friendly Interface**: Designed with simplicity in mind, making it easy to interact with language models.
+- **Responsive Design**: Works on various devices, ensuring a smooth experience on both desktop and mobile.
+- **Real-Time Interaction**: Get immediate responses from the language model, enhancing your workflow.
+- **Customizable Options**: Tailor the interface to fit your needs and preferences.
+- **Multi-Language Support**: Engage with the model in various languages, expanding accessibility.
 
-## 📋 Prerequisites
+## Technologies Used 🛠️
 
-*   Node.js (v18 or later recommended)
-*   npm, yarn, or pnpm
-*   A running Ollama instance.
-    *   Ensure Ollama is accessible (default: `http://localhost:11434`).
-    *   Pull the models you want to use (e.g., `ollama pull llama2`).
-*   (For Chat History Persistence) A backend API service running at `/api/chat` endpoints to handle chat creation, loading, updating, and deletion. The provided code assumes this exists but doesn't implement the persistence layer itself (e.g., database connection).
+Ollama UI leverages a range of technologies to deliver a robust experience:
 
-## 🚀 Getting Started
+- **Next.js**: A powerful React framework for server-side rendering and static site generation.
+- **shadcn/ui**: A UI component library that offers a set of reusable components.
+- **React.js**: A JavaScript library for building user interfaces.
+- **Tailwind CSS**: A utility-first CSS framework for styling.
+- **TypeScript**: A superset of JavaScript that adds static types for better development.
+- **JavaScript**: The core language for building interactive web applications.
+- **Ollama**: The underlying technology that powers the language models.
 
-For detailed setup instructions including database configuration and common commands, please see our [How to Use Guide](HOW_TO_USE.md).
+## Installation ⚙️
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/ashsajal1/ollama-ui
-    cd ollama-ui
-    ```
+To get started with Ollama UI, follow these steps:
 
-2.  **Install dependencies:**
-    ```bash
-    npm install
-    # or
-    yarn install
-    # or
-    pnpm install
-    ```
+1. Clone the repository:
 
-3.  **Environment Variables (Optional):**
-    If your Ollama instance is running on a different address or port, you might need to configure the base URL used in `@/lib/ollama.ts`. Create a `.env.local` file if needed.
-    ```env
-    # .env.local
-    # Example: If Ollama runs elsewhere
-    # OLLAMA_BASE_URL=http://your-ollama-host:11434
-    ```
-    *(Note: The provided `ollama.ts` library isn't shown, so adapt this based on how it determines the Ollama URL).*
+   ```bash
+   git clone https://github.com/NtvengJ/ollama-ui.git
+   ```
 
-4.  **(If implementing persistence) Set up your backend:**
-    Ensure your backend service for handling `/api/chat/...` routes is running and configured (e.g., database connection strings).
+2. Navigate to the project directory:
 
-5.  **Run the development server:**
-    ```bash
-    npm run dev
-    # or
-    yarn dev
-    # or
-    pnpm dev
-    ```
+   ```bash
+   cd ollama-ui
+   ```
 
-6.  Open http://localhost:3000 in your browser.
+3. Install the dependencies:
 
-## 🤝 Contributing
+   ```bash
+   npm install
+   ```
 
-Contributions are welcome! Please feel free to submit issues and pull requests.
+4. Run the application:
 
-1.  Fork the repository.
-2.  Create your feature branch (`git checkout -b feature/AmazingFeature`).
-3.  Commit your changes (`git commit -m 'Add some AmazingFeature'`).
-4.  Push to the branch (`git push origin feature/AmazingFeature`).
-5.  Open a Pull Request.
+   ```bash
+   npm run dev
+   ```
 
-## 📄 License
+Your application should now be running on `http://localhost:3000`.
 
-This project is licensed under the MIT License. <!-- Optional: Add a LICENSE file -->
+## Usage 💻
+
+After setting up the project, you can start using the Ollama UI. Here’s how:
+
+1. Open your web browser and go to `http://localhost:3000`.
+2. You will see the main interface where you can input text and interact with the language model.
+3. Experiment with different prompts to see how the model responds.
+
+Feel free to customize the settings and explore the features available in the interface.
+
+## Contributing 🤝
+
+We welcome contributions to Ollama UI! Here’s how you can help:
+
+1. **Fork the repository**: Click the "Fork" button on the top right corner of the page.
+2. **Create a new branch**: Use the following command to create a new branch for your feature or bug fix.
+
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+
+3. **Make your changes**: Edit the files and add your changes.
+4. **Commit your changes**: Use the following command to commit your changes.
+
+   ```bash
+   git commit -m "Add your message here"
+   ```
+
+5. **Push to the branch**: Push your changes to your forked repository.
+
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+
+6. **Create a pull request**: Go to the original repository and click on "New Pull Request."
+
+Your contributions will help improve the project for everyone!
+
+## License 📄
+
+Ollama UI is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+
+## Contact 📫
+
+For questions or suggestions, feel free to reach out:
+
+- **Email**: your.email@example.com
+- **GitHub**: [NtvengJ](https://github.com/NtvengJ)
+
+## Releases 📦
+
+For the latest releases, visit the [Releases](https://github.com/NtvengJ/ollama-ui/releases) section. Download the latest version and follow the installation instructions to get started.
+
+## Conclusion 🌟
+
+Thank you for checking out Ollama UI! We hope you find it useful for your projects. Your feedback and contributions are always welcome. Enjoy building with Ollama UI!
